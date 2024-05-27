@@ -1,3 +1,98 @@
 /* 
     General Styles
 */
+.mainContainer {
+    background-color: rgb(69, 70, 71);
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .h-100 {
+    background-color: rgb(69, 70, 71);
+  }
+  
+  .mainTitle {
+    color: rgb(255, 193, 7);
+    text-align: left;
+    text-transform: capitalize;
+    margin-top: 2rem;
+  }
+  
+  .card-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    text-align: left;
+  }
+  
+  .card-container > div {
+    flex: 0 0 250px;
+    height: 450px;
+    margin-right: 10px; /* Add some margin between cards */
+  
+    scroll-snap-align: start;
+  }
+  
+  .card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    margin-bottom: 20px;
+    background-color: rgb(46, 46, 49);
+  }
+  
+  .card-text {
+    color: bisque;
+  }
+  
+  .card-title {
+    color: rgb(255, 193, 7);
+  }
+  
+  .card-img-top {
+    object-fit: scale-down;
+    width: 100%;
+    height: 50%; /* Adjust image height */
+    padding-top: 10px;
+  }
+  
+  .learn-more-btn {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    left: 10px; /* Adjust as needed */
+  }
+  
+  .favorite-btn {
+    position: absolute;
+    bottom: 10px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+  }
+  
+  .badge-pill {
+    color: black;
+    font-size: 15px;
+  }
+  
+  .logo {
+    margin-left: 1rem;
+  }
+  
+  .drop-menu {
+    position: relative;
+    min-width: 20rem;
+  }
+  
+  .trash-icon {
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 20px;
+  }
+  
+  .singlePage h2 {
+    color: rgb(255, 193, 7);
+  }
+  
+  .singlePage p {
+    color: bisque;
+  }
