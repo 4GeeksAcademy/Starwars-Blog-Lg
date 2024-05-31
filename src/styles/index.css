@@ -2,20 +2,30 @@
     General Styles
 */
 .mainContainer {
-    background-color: rgb(69, 70, 71);
-    margin-left: 1rem;
-    margin-right: 1rem;
+  background-image: url('https://media0.giphy.com/media/JNy7DzgqUnh9p93aru/giphy.gif?cid=6c09b952icunonzp8noduutrwuvivmvy0xr1b4nqmfem17dk&ep=v1_gifs_search&rid=giphy.gif&ct=g');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* Adjust based on your layout needs */
+  width: 100%;
   }
   
   .h-100 {
     background-color: rgb(69, 70, 71);
   }
+  .custom-navbar {
+    width: 100%; /* Make the navbar full width */
+    background: url('https://t4.ftcdn.net/jpg/03/86/82/73/360_F_386827376_uWOOhKGk6A4UVL5imUBt20Bh8cmODqzx.jpg') no-repeat center center; /* Replace with the URL of your space background image */
+    background-size: cover;
+    color: #fff;
+  }
+
   
   .mainTitle {
     color: rgb(255, 193, 7);
     text-align: left;
     text-transform: capitalize;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   
   .card-container {
@@ -72,21 +82,25 @@
     color: black;
     font-size: 15px;
   }
+  .badge {
+    background-color: #ffcc00; 
+  }
   
   .logo {
     margin-left: 1rem;
+  
+    max-height: 50px;
+  
   }
   
   .drop-menu {
-    position: relative;
-    min-width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
   
   .trash-icon {
-    right: 10%;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-left: 20px;
+    cursor: pointer;
   }
   
   .singlePage h2 {

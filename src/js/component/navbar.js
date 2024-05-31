@@ -2,10 +2,8 @@ import React, { useContext, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'; 
 import { Context } from "../store/appContext";
 import { Dropdown } from 'react-bootstrap';
-import DropdownComponent from 'react-bootstrap/Dropdown'; 
 
 import SearchBar from "./SearchBar";
-import react from 'react';
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
@@ -43,18 +41,16 @@ export const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-light bg-dark mb-5 mx-4 fixed-top">
-      {" "}
-      {/* Added fixed-top class */}
+    <nav className="navbar navbar-dark bg-dark fixed-top custom-navbar">
       <Link to="/">
-	  <img
-        src="https://i.pinimg.com/originals/9e/4b/8c/9e4b8cd05a0e5c0b1e9237d9013417af.png"
-        width="100"
-        height="50"
-        className="d-inline-block align-top logo"
-        alt="Home Page"
-      />
-    </Link>
+        <img
+          src="https://i.pinimg.com/originals/9e/4b/8c/9e4b8cd05a0e5c0b1e9237d9013417af.png"
+          width="100"
+          height="50"
+          className="d-inline-block align-top logo"
+          alt="Home Page"
+        />
+      </Link>
       <SearchBar
         options={[
           ...store.people.map((person) => person.name),
