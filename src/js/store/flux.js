@@ -585,20 +585,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 		  }
 		},
   
-		fetchCharacterDetails: async () => {
-		  try {
-			const updatedCharacterDetails = {};
-			const { people } = getStore();
-			for (const character of people) {
-			  const response = await fetch(character.url);
-			  const data = await response.json();
-			  updatedCharacterDetails[character.uid] = data.result.properties;
+		getCharacterProperties: async (id) => {
+			const oldStore = getStore();
+	
+			try {
+			  const characterPropResponse = await fetch(
+				"https://www.swapi.tech/api/people/" + id
+			  );
+			  const characterPropData = await characterPropResponse.json();
+			  setStore({
+				...oldStore,
+				characterProperties: characterPropData.result.properties,
+			  });
+			} catch (error) {
+			  console.log("error fetching character properties -->", error);
 			}
-			setStore({ characterDetails: updatedCharacterDetails });
-		  } catch (error) {
-			console.log("error fetching character details -->", error);
-		  }
-		},
+		  },
   
 		fetchPlanetDetails: async () => {
 		  try {

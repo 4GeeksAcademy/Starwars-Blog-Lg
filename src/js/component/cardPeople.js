@@ -1,3 +1,4 @@
+// cardPeople.js
 import React, { useContext, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
@@ -50,7 +51,7 @@ export const CardPeople = () => {
                         </div>
                       )}
                       <Link
-                        to={`/single/${el.uid}`}
+                        to={`/characterSingle/${el.uid}`}
                         className="btn btn-primary learn-more-btn"
                       >
                         Learn more!
